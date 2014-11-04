@@ -1,15 +1,15 @@
 {
     "name": "selenium-sauce",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "description": "Easily run your Selenium tests in SauceLabs",
     "keywords": "selenium sauce saucelabs webdriverio",
     "homepage": "http://github.com/alexbrombal/selenium-sauce",
     "bugs": "http://github.com/alexbrombal/selenium-sauce/issues",
     "license": "MIT",
     "author": {
-        "name" : "Alex Brombal",
-        "email" : "alex.brombal@gmail.com",
-        "url" : "http://hirealex.com/"
+        "name": "Alex Brombal",
+        "email": "alex.brombal@gmail.com",
+        "url": "http://hirealex.com/"
     },
     "main": "lib/selenium-sauce.js",
     "repository": {
@@ -21,6 +21,7 @@
         "extend": "^2.0.0",
         "http-server": "^0.7.2",
         "sauce-connect-launcher": "^0.7.0",
+        "saucelabs": "^0.1.1",
         "selenium-standalone": "^2.44.0",
         "webdriverio": "^2.3.0"
     }
