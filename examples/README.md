@@ -2,7 +2,7 @@
 
 ## Mocha example
 
-You'll want to install [Mocha](http://mochajs.org) using nom:
+You'll want to install [Mocha](http://mochajs.org) using npm:
 
 ```bash
 $ npm install -g mocha
