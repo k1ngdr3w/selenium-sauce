@@ -204,31 +204,41 @@ The `browser` object is the result of the `webdriverio.remote()` function. It pr
 
 Selenium Sauce comprises a set of tools that are made transparently available through properties of the Selenium Sauce object. You may use these objects just as you would use the original tools, so take a look at each component's original documentation for details.
 
-- #### WebdriverIO - http://webdriver.io/
+- #### WebdriverIO 
+  
+  http://webdriver.io/
 
   `SeSauce.webdriver`
 
   This is the API wrapper around the Selenium WebDriver protocol. You probably don't want to use this object directly, but instead use the `browser` object that is passed to the `doEachBrowser` callback.
 
-- #### SauceLabs - https://github.com/holidayextras/node-saucelabs
+- #### SauceLabs
+
+  https://github.com/holidayextras/node-saucelabs
 
   `SeSauce.sauceLabs`
 
   SauceLabs has their own set of APIs (independent of Selenium) that allow you to query for job IDs or update jobs. Selenium Sauce does not actually use these APIs, but provides it to you for convenience&mdash;for example, to set the current job's pass/fail status. You're welcome!
 
-- #### HttpServer - https://github.com/nodeapps/http-server
+- #### HttpServer
+ 
+  https://github.com/nodeapps/http-server
 
   `SeSauce.httpServer`
 
   It's possible the tests you want to run are in HTML files that only exist on your machine, and not on a publicly-accessible web server. HttpServer is a simple, minimal configuration web server that runs on your local machine to provide browsers access to these test web pages.
 
-- #### Sauce Connect Launcher - https://github.com/bermi/sauce-connect-launcher
+- #### Sauce Connect Launcher
+
+  https://github.com/bermi/sauce-connect-launcher
 
   `SeSauce.sauceConnect`
 
   SauceLabs provides a secure tunnel (called Sauce Connect) between itself and your machine so that SauceLabs' browsers can load webpages that reside on your local machine. This is a Node.js wrapper around the Sauce Connect client.
 
-- #### Selenium Standalone - https://github.com/vvo/selenium-standalone
+- #### Selenium Standalone
+
+  https://github.com/vvo/selenium-standalone
 
   `SeSauce.selenium`
 
