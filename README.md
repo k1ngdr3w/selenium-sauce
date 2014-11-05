@@ -106,15 +106,15 @@ On top of that, developing and testing locally requires a local Selenium server,
 
 **Selenium Sauce** provides a simple API that encapsulates all of these features, by reusing existing tools and orchestrating their functionality. Below are the tools that are used:
 
-- [**Webdriverio**](#WebdriverIO)
+- [**WebdriverIO**](#webdriverio)
   Provides the API for issuing commands to the Selenium Server (on SauceLabs or locally)
-- [**SauceLabs**](#SauceLabs)  
+- [**SauceLabs**](#saucelabs)  
   A Node.js wrapper for the SauceLabs API (listing job IDs, updating jobs, etc.)
-- [**HttpServer**](#HttpServer)  
+- [**HttpServer**](#httpserver)  
   Creates a local web server so that browsers can load webpages from your local machine.
-- [**Sauce Connect Launcher**](#Sauce-Connect-Launcher)  
+- [**Sauce Connect Launcher**](#sauce-connect-launcher)  
   Provides a secure tunnel between SauceLabs and your machine so that SauceLabs' browsers can load webpages that reside on your local machine.
-- [**Selenium Standalone**](#Selenium-Standalone) (for local testing)  
+- [**Selenium Standalone**](#selenium-standalone) (for local testing)  
   Runs a Selenium Server on your local machine. This is useful for development and is only used if SauceLabs is disabled.
 
 Each of these utilities are transparently exposed through the Selenium Sauce interface and you can work directly with them. The configuration file values are passed directly into each respective utility (with the exceptions clearly marked here in the documentation and example files).
