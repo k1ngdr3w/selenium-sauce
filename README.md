@@ -125,7 +125,7 @@ Each of these utilities are transparently exposed through the Selenium Sauce int
 
 Selenium Sauce is not a unit test runner or framework. It is meant to be used in conjunction with one, however. Selenium Sauce simply provides an easy way for your tests to connect to Sauce Labs and perform actions&mdash;it is up to you to determine whether the actions were successful, and pass or fail your tests accordingly.
 
-See the mocha example below for a sample of how to use this with a unit test utility.
+See the [examples](https://github.com/alexbrombal/selenium-sauce/examples) for a sample of how to use this with a unit test utility.
 
 
 
@@ -156,29 +156,21 @@ The first parameter to the `init` function must be an object containing your con
 
 `{`
 
-- `quiet:` - `true` or `false`  
-  If true, tells Selenium Sauce to silence its console output.
+- `quiet:` - If true, tells Selenium Sauce to silence its console output.
 
-- `webdriver:`  
-  Options for [WebdriverIO](#webdriverio). These options are passed directly into the `webdriverio.remote()` function.
+- `webdriver:` - Options for [WebdriverIO](#webdriverio). These options are passed directly into the `webdriverio.remote()` function.
 
-  - `desiredCapabilities:`  
-    *Non-standard option:* an array of desired capabilities. This differs from the standard option in that it is an array of browser capabilities rather than a single instance.
+  - `desiredCapabilities:` - *Non-standard option:* an array of desired capabilities. This differs from the standard option in that it is an array of browser capabilities rather than a single instance.
 
-- `httpServer:`  
-  Options for [HttpServer](#httpserver). These options are passed directly into `httpserver.createServer()`.   
+- `httpServer:` - Options for [HttpServer](#httpserver). These options are passed directly into `httpserver.createServer()`.   
 
-  - `port`  
-    *Non-standard option:* passed into HttpServer's `listen` function as the port on which to listen.
+  - `port` - *Non-standard option:* passed into HttpServer's `listen` function as the port on which to listen.
 
-- `sauceLabs:`  
-  Options for [SauceLabs](#saucelabs). These options are passed directly into the `SauceLabs()` constructor.
+- `sauceLabs:` - Options for [SauceLabs](#saucelabs). These options are passed directly into the `SauceLabs()` constructor.
 
-- `sauceConnect:`  
-  Options for [Sauce Connect Launcher](#sauce-connect-launcher). These options are passed directly into the `SauceConnectLauncher()` constructor.
+- `sauceConnect:` - Options for [Sauce Connect Launcher](#sauce-connect-launcher). These options are passed directly into the `SauceConnectLauncher()` constructor.
 
-- `selenium:`  
-  Options for [Selenium Standalone](#selenium-standalone).
+- `selenium:` - Options for [Selenium Standalone](#selenium-standalone).
 
   - `args:` - Array of strings. Passed as the second argument to the `selenium()` constructor (which are subsequently passed as the command-line arguments to `java -jar selenium-server-standalone-X.XX.X.jar`)
 
