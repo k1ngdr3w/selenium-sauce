@@ -125,7 +125,7 @@ Each of these utilities are transparently exposed through the Selenium Sauce int
 
 Selenium Sauce is not a unit test runner or framework. It is meant to be used in conjunction with one, however. Selenium Sauce simply provides an easy way for your tests to connect to Sauce Labs and perform actions&mdash;it is up to you to determine whether the actions were successful, and pass or fail your tests accordingly.
 
-See the [examples](https://github.com/alexbrombal/selenium-sauce/examples) for a sample of how to use this with a unit test utility.
+See the [examples](https://github.com/alexbrombal/selenium-sauce/tree/master/examples) for a sample of how to use this with a unit test utility.
 
 
 
@@ -240,4 +240,4 @@ Selenium Sauce comprises a set of tools that are made transparently available th
 
 ## Examples
 
-Selenium Sauce is not a unit test runner and has no dependencies on a specific unit test framework, but functions best in conjunction with one. Check out the examples using real test frameworks in the [/examples](https://github.com/alexbrombal/selenium-sauce/examples) directory (see the README file there for information on how to run the tests).
+Selenium Sauce is not a unit test runner and has no dependencies on a specific unit test framework, but functions best in conjunction with one. Check out the examples using real test frameworks in the [/examples](https://github.com/alexbrombal/selenium-sauce/tree/master/examples) directory (see the README file there for information on how to run the tests).
