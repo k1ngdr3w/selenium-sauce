@@ -22,7 +22,7 @@ Configure:
 ```javascript
 module.exports = {
     quiet: false,           // Silences the console output
-    webdriver: {            // Options for selenium webdriver (webdriverio)
+    webdriver: {            // Options for Selenium WebDriver (WebdriverIO)
         user: process.env.SAUCE_USERNAME,
         key: process.env.SAUCE_ACCESS_KEY,
         desiredCapabilities = [{
@@ -160,25 +160,25 @@ The first parameter to the `init` function must be an object containing your con
   If true, tells Selenium Sauce to silence its console output.
 
 - `webdriver:`  
-  Options for [WebdriverIO](#WebdriverIO). These options are passed directly into the `webdriverio.remote()` function.
+  Options for [WebdriverIO](#webdriverio). These options are passed directly into the `webdriverio.remote()` function.
 
   - `desiredCapabilities:`  
     *Non-standard option:* an array of desired capabilities. This differs from the standard option in that it is an array of browser capabilities rather than a single instance.
 
 - `httpServer:`  
-  Options for [HttpServer](#HttpServer). These options are passed directly into `httpserver.createServer()`.   
+  Options for [HttpServer](#httpserver). These options are passed directly into `httpserver.createServer()`.   
 
   - `port`  
     *Non-standard option:* passed into HttpServer's `listen` function as the port on which to listen.
 
 - `sauceLabs:`  
-  Options for [SauceLabs](#SauceLabs). These options are passed directly into the `SauceLabs()` constructor.
+  Options for [SauceLabs](#saucelabs). These options are passed directly into the `SauceLabs()` constructor.
 
 - `sauceConnect:`  
-  Options for [Sauce Connect Launcher](#Sauce-Connect-Launcher). These options are passed directly into the `SauceConnectLauncher()` constructor.
+  Options for [Sauce Connect Launcher](#sauce-connect-launcher). These options are passed directly into the `SauceConnectLauncher()` constructor.
 
 - `selenium:`  
-  Options for [Selenium Standalone](#Selenium-Standalone).
+  Options for [Selenium Standalone](#selenium-standalone).
 
   - `args:` - Array of strings. Passed as the second argument to the `selenium()` constructor (which are subsequently passed as the command-line arguments to `java -jar selenium-server-standalone-X.XX.X.jar`)
 
@@ -189,7 +189,7 @@ In the Quick Start example above, the configuration object is stored in `se-sauc
 #### The `doEachBrowser` callback
 
 
-The second parameter to `init()` is the `doEachBrowser` callback, which is a function that is run once on each browser. It also receives two parameters: a *browser* object, which is an instance of [webdriverio](#WebdriverIO)'s main interface, and a completion callback that you must invoke when you are done with the browser.
+The second parameter to `init()` is the `doEachBrowser` callback, which is a function that is run once on each browser. It also receives two parameters: a *browser* object, which is an instance of [WebdriverIO](#webdriverio)'s main interface, and a completion callback that you must invoke when you are done with the browser.
 
 The `browser` object is the result of the `webdriverio.remote()` function. It provides all the Selenium API calls that are documented on the [WebdriverIO website](http://webdriver.io).
 
