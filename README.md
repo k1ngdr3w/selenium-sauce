@@ -1,7 +1,7 @@
 Selenium Sauce
 ==============
 
-Easily run your Selenium tests on SauceLabs!
+Easily run your Selenium tests on SauceLabs using Node.js.
 
 http://npmjs.org/package/selenium-sauce
 
@@ -50,7 +50,7 @@ module.exports = {
 };
 ```
 
-Run:
+Create test:
 
 `test.js`:
 
@@ -85,6 +85,8 @@ SeSauce.init(require('./se-sauce.config'), function(browser, browserComplete) {
 });
 
 ```
+
+Run:
 
 ```bash
 $ node test.js
@@ -148,7 +150,7 @@ var SeSauce = require('selenium-sauce');
 
   The `init` method accepts two parameters: a configuration object, and a callback method that is invoked once for each browser that is configured.
 
-### Configuration
+#### Configuration
 
 The first parameter to the `init` function must be an object containing your configuration settings for each component of Selenium Sauce. Each of these configuration objects are passed as-is to their respective components (with the exceptions noted below). For details about each component's configuration sub-object, see the provided link to the documentation.
 
@@ -184,10 +186,10 @@ The first parameter to the `init` function must be an object containing your con
 
 In the Quick Start example above, the configuration object is stored in `se-sauce.config.js`. This is not a requirement, only a convenient place to store a large object. How ever you store the object, you must pass it as the first argument to the `init()` function.
 
-### The `doEachBrowser` callback
+#### The `doEachBrowser` callback
 
 
-The `doEachBrowser` callback provides a way to specify code that should be run once on each browser. It also receives two parameters: a *browser* object, which is an instance of [webdriverio](#WebdriverIO)'s main interface, and a completion callback that you must invoke when you are done with the browser.
+The second parameter to `init()` is the `doEachBrowser` callback, which is a function that is run once on each browser. It also receives two parameters: a *browser* object, which is an instance of [webdriverio](#WebdriverIO)'s main interface, and a completion callback that you must invoke when you are done with the browser.
 
 The `browser` object is the result of the `webdriverio.remote()` function. It provides all the Selenium API calls that are documented on the [WebdriverIO website](http://webdriver.io).
 
@@ -231,3 +233,9 @@ Selenium Sauce comprises a set of tools that are made transparently available th
   `SeSauce.selenium`
 
   Runs a Selenium Server on your local machine. This is useful for development and is only used if SauceLabs is disabled.
+
+
+
+## Examples
+
+Selenium Sauce is not a unit test runner and has no dependencies on a specific unit test framework, but functions best in conjunction with one. Check out the examples using real test frameworks in the [/examples](https://github.com/alexbrombal/selenium-sauce/examples) directory (see the README file there for information on how to run the tests).
