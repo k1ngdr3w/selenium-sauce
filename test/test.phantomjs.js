@@ -1,14 +1,22 @@
 var SeSauce = require('../inst/selenium-sauce'),
     should = require('./lib/should');
 
-var config = require('./se-sauce.config');
-
-// Create one parent test suite, simply so we can set the timeout value.
-// You could also set this in the mocha command line arguments.
-
-// Initialize Selenium Sauce using the configuration file. The callback function will be invoked
-// once for each browser in the config.webdriver.desiredCapabilities array.
-SeSauce.init(config, function(browser) {
+new SeSauce({
+    quiet: false,
+    webdriver: {
+        logLevel: 'silent',
+        desiredCapabilities: { browserName: 'phantomjs' }
+    },
+    httpServer: {
+        disable: false,
+        port: 8081,
+        root: __dirname
+    },
+    sauceLabs: {
+    },
+    sauceConnect: {
+    }
+}, function(browser) {
 
     // Since this test suite is run once for each browser, we'll output the
     // browser name in the test suite description.
@@ -36,7 +44,7 @@ SeSauce.init(config, function(browser) {
         // After all tests are done, update the SauceLabs job with the test status,
         // and close the browser.
         after(function(done) {
-            SeSauce.report(browser, this.currentTest.state === 'passed', done);
+            browser.report(this.currentTest.state === 'passed', done);
         });
 
     });
