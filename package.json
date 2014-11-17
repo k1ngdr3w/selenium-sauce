@@ -33,6 +33,6 @@
         "webdriverio": "^2.3.0"
     },
     "scripts": {
-        "test": "istanbul instrument -o inst lib && mocha -R mocha-istanbul && mocha -R spec"
+        "test": "istanbul instrument -o inst lib && multi='mocha-istanbul=- spec=-' ISTANBUL_REPORTERS=lcov mocha -R mocha-multi"
     }
 }
