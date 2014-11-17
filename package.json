@@ -19,6 +19,7 @@
     "devDependencies": {
         "mocha": "*",
         "mocha-istanbul": "^0.2.0",
+        "mocha-multi": "*",
         "istanbul": "*",
         "coveralls": "*"
     },
@@ -32,6 +33,6 @@
         "webdriverio": "^2.3.0"
     },
     "scripts": {
-        "test": "istanbul instrument -o inst lib && mocha -R mocha-istanbul -R spec"
+        "test": "istanbul instrument -o inst lib && multi='mocha-istanbul=- spec=-' mocha -R mocha-multi"
     }
 }
