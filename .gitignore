@@ -1,3 +1,10 @@
+.DS_Store
 .idea
 npm-debug.log
 node_modules
+
+# unit test cruft
+inst/
+lcov-report/
+lcov.info
+

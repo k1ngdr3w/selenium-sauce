@@ -1,6 +1,8 @@
 Selenium Sauce
 ==============
 
+[ ![Codeship Status for alexbrombal/selenium-sauce](https://codeship.com/projects/f911c670-503c-0132-33dc-66df49ff6485/status)](https://codeship.com/projects/47985)
+
 Easily run your Selenium tests on SauceLabs using Node.js.
 
 http://npmjs.org/package/selenium-sauce
