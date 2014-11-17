@@ -16,14 +16,14 @@ new SeSauce({
             browserName: 'chrome',
             version: '27',
             platform: 'XP',
-            tags: ['examples'],
-            name: 'This is an example test'
+            tags: ['selenium sauce'],
+            name: 'Selenium Sauce unit test'
         }, {
             browserName: 'firefox',
             version: '33',
             platform: 'XP',
-            tags: ['examples'],
-            name: 'This is an example test'
+            tags: ['selenium sauce'],
+            name: 'Selenium Sauce unit test'
         }]
     },
     httpServer: {
