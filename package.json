@@ -1,6 +1,6 @@
 {
     "name": "selenium-sauce",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "description": "Easily run your Selenium tests in SauceLabs",
     "keywords": "selenium sauce saucelabs webdriverio",
     "homepage": "http://github.com/alexbrombal/selenium-sauce",
