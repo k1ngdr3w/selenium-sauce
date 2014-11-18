@@ -4,6 +4,9 @@ Selenium Sauce
 [ ![Codeship Status for alexbrombal/selenium-sauce](https://codeship.com/projects/f911c670-503c-0132-33dc-66df49ff6485/status)](https://codeship.com/projects/47985)
 
 [![Coverage Status](https://img.shields.io/coveralls/alexbrombal/selenium-sauce.svg)](https://coveralls.io/r/alexbrombal/selenium-sauce?branch=master)
+[![Codeship](http://img.shields.io/codeship/f911c670-503c-0132-33dc-66df49ff6485.svg)]((https://codeship.com/projects/47985)
+![Dependencies](http://img.shields.io/david/alexbrombal/selenium-sauce.svg)
+![Dev Dependencies](http://img.shields.io/david/dev/alexbrombal/selenium-sauce.svg)
 
 Easily run your Selenium tests on SauceLabs using Node.js.
 
