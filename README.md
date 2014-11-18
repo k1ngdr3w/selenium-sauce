@@ -5,8 +5,8 @@ Selenium Sauce
 
 [![Coverage Status](https://img.shields.io/coveralls/alexbrombal/selenium-sauce.svg)](https://coveralls.io/r/alexbrombal/selenium-sauce?branch=master)
 [![Codeship](http://img.shields.io/codeship/f911c670-503c-0132-33dc-66df49ff6485.svg)](https://codeship.com/projects/47985)
-![Dependencies](http://img.shields.io/david/alexbrombal/selenium-sauce.svg)
-![Dev Dependencies](http://img.shields.io/david/dev/alexbrombal/selenium-sauce.svg)
+[![Dependencies](http://img.shields.io/david/alexbrombal/selenium-sauce.svg)](https://david-dm.org/alexbrombal/selenium-sauce)
+[![Dev Dependencies](http://img.shields.io/david/dev/alexbrombal/selenium-sauce.svg)](https://david-dm.org/alexbrombal/selenium-sauce#info=devDependencies&view=table)
 
 Easily run your Selenium tests on SauceLabs using Node.js.
 

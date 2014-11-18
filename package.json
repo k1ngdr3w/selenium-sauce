@@ -30,7 +30,7 @@
         "http-server": "^0.7.2",
         "sauce-connect-launcher": "^0.9.0",
         "saucelabs": "^0.1.1",
-        "selenium-standalone": "2.43",
+        "selenium-standalone": "2.43.1-5",
         "webdriverio": "^2.3.0"
     },
     "scripts": {
