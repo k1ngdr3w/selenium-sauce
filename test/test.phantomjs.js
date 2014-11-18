@@ -44,7 +44,7 @@ new SeSauce({
         // After all tests are done, update the SauceLabs job with the test status,
         // and close the browser.
         after(function(done) {
-            browser.report(this.currentTest.state === 'passed', done);
+            browser.passed(this.currentTest.state === 'passed', done);
         });
 
     });
