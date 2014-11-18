@@ -68,11 +68,12 @@ new SeSauce({
         // After all tests are done, update the SauceLabs job with the test status,
         // and close the browser.
         after(function(done) {
+            var self = this;
             // This is a roundabout way of doing it, but allows us to test both browser.updateJob and browser.passed.
             browser.updateJob({
                 build: process.env.CI_BUILD_NUMBER
             }, function() {
-                browser.passed(this.currentTest.state === 'passed', done);
+                browser.passed(self.currentTest.state === 'passed', done);
             });
         });
 
