@@ -147,6 +147,13 @@ The `browser` object that is passed into the callback is the return value of [We
 - The `browser.end()` method is also slightly modified to allow Selenium Sauce to shut down properly when all browsers have been ended. Again, you don't need to do anything differently, but you **must** call this method when you are finished with the browser in order to properly shut down the various services that are running.
 - A new method `browser.report(success, onComplete)` has been added to the browser object, which allows you to report the pass/fail result of the test to SauceLabs. The `success` parameter is a boolean indicating pass (true) or fail (false), and the `onComplete` callback is executed when the reporting process is complete. **`browser.report` automatically calls `end()` when it finishes, so you must not call both `report` and `end`.**
 
+Within the browser callback method, `this` refers to the Selenium Sauce instance. Through this instance, you can access the following properties:
+
+- `webdriver` - The wrapper around the Selenium WebDriver protocol. You probably won't need to use this object directly, but instead use the browser object that is passed to the "each browser" callback.
+- `sauceLabs` - The wrapper around the Sauce Labs REST API.
+- `httpServer` - The instance of [http-server](#HttpServer) that is started by SauceLabs in order for Sauce Connect to load pages on your local machine.
+- `sauceConnect` - The Sauce Connect [child process object](http://nodejs.org/api/process.html).
+- `selenium` - This is the Selenium Standalone [child process object](http://nodejs.org/api/process.html).
 
 
 ### Configuration
@@ -186,7 +193,7 @@ Selenium Sauce comprises a set of tools that are made transparently available th
   
   http://webdriver.io/
 
-  `SeSauce.webdriver`
+  `this.webdriver`
 
   This is the API wrapper around the Selenium WebDriver protocol. You probably don't want to use this object directly, but instead use the `browser` object that is passed to the `doEachBrowser` callback.
 
@@ -194,7 +201,7 @@ Selenium Sauce comprises a set of tools that are made transparently available th
 
   https://github.com/holidayextras/node-saucelabs
 
-  `SeSauce.sauceLabs`
+  `this.sauceLabs`
 
   SauceLabs has their own set of APIs (independent of Selenium) that allow you to query for job IDs or update jobs. Selenium Sauce does not actually use these APIs, but provides it to you for convenience&mdash;for example, to set the current job's pass/fail status. You're welcome!
 
@@ -202,7 +209,7 @@ Selenium Sauce comprises a set of tools that are made transparently available th
  
   https://github.com/nodeapps/http-server
 
-  `SeSauce.httpServer`
+  `this.httpServer`
 
   It's possible the tests you want to run are in HTML files that only exist on your machine, and not on a publicly-accessible web server. HttpServer is a simple, minimal configuration web server that runs on your local machine to provide browsers access to these test web pages.
 
@@ -210,7 +217,7 @@ Selenium Sauce comprises a set of tools that are made transparently available th
 
   https://github.com/bermi/sauce-connect-launcher
 
-  `SeSauce.sauceConnect`
+  `this.sauceConnect`
 
   SauceLabs provides a secure tunnel (called Sauce Connect) between itself and your machine so that SauceLabs' browsers can load webpages that reside on your local machine. This is a Node.js wrapper around the Sauce Connect client.
 
@@ -218,7 +225,7 @@ Selenium Sauce comprises a set of tools that are made transparently available th
 
   https://github.com/vvo/selenium-standalone
 
-  `SeSauce.selenium`
+  `this.selenium`
 
   Runs a Selenium Server on your local machine. This is useful for development and is only used if SauceLabs is disabled.
 
