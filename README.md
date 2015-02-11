@@ -37,7 +37,7 @@ new SeSauce(
         webdriver: {            // Options for Selenium WebDriver (WebdriverIO)
             user: process.env.SAUCE_USERNAME,
             key: process.env.SAUCE_ACCESS_KEY,
-            desiredCapabilities = [{
+            desiredCapabilities: [{
                 browserName: 'chrome',
                 version: '27',
                 platform: 'XP',
