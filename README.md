@@ -70,7 +70,7 @@ new SeSauce(
             browser.url('http://localhost:8080/test.html', function() {
 
                 // Tell SauceLabs that the test was successful
-                browser.report(true, myCompletionCallback);
+                browser.passed(true, myCompletionCallback);
             });
         });
     }
